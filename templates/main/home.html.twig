@@ -1,0 +1,18 @@
+{% extends 'theme.html.twig' %}
+
+ {% block titre %}
+    Les couleurs
+{% endblock %}
+
+{% block central %}
+
+{% for c in couleurs %}
+{# path('delete_personne', { 'id': p.id} ) #}
+{{ c.title}}
+ <a href="{{ path('couleur_delete',{'id':c.id}) }}" >delete</a> 
+ |  <a href="{{ path('couleur_modify',{'id':c.id}) }}" >modifier</a>
+ <br>
+{% endfor %}
+<br><br>
+<a href="{{ path('couleur_add') }}"> ajouter</a>
+{% endblock %}
