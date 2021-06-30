@@ -14,5 +14,12 @@
  <br>
 {% endfor %}
 <br><br>
+<form action="{{ path('couleur_add_brut') }}" method="post" >
+    <input name="couleur">
+    <br>
+    <button type="submit">OK</button>
+</form>
+ <a href="{{ path('couleur_add_normal') }}">Ajouter complet</a>
+ <br>
 <a href="{{ path('couleur_add') }}"> ajouter</a>
 {% endblock %}

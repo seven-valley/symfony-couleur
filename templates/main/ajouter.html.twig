@@ -1,0 +1,21 @@
+{% extends 'theme.html.twig' %}
+
+ {% block titre %}
+    Ajouter
+{% endblock %}
+
+{% block central %}
+    <br>
+    <h1>Ajouter</h1>
+    
+
+    <!-- <form action="????"..... -->
+    {{ form_start(couleurForm) }}
+    <!--  affichet TOUS LES  champ input ou autre -->
+    {{ form_widget(couleurForm.title) }}
+
+    <button type="submit"> GO</button>
+    {{ form_end(couleurForm) }}
+    <!-- </form> -->
+    <br><br>
+{% endblock %}
